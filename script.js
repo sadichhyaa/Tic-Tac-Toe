@@ -7,14 +7,34 @@ const mainBox = document.querySelector(".main"),
     players = playBoard.querySelector(".players"),
     resultBox = mainBox.querySelector(".result-box"),
     wonText = resultBox.querySelector(".won-text"),
-    replayButton = resultBox.querySelector(".replay-button")
+    replayButton = resultBox.querySelector(".replay-button"),
+    selectTheme=mainBox.querySelector(".select-theme"),
+    themeCircles = selectTheme.querySelector(".theme-circles"),
+    blueTheme = themeCircles.querySelector(".blue-theme"),
+    greenTheme = themeCircles.querySelector(".green-theme"),
+    grayTheme = themeCircles.querySelector(".gray-theme")
 
 
 window.onload = () => {
     // for(i=0;i<allCell.length;i++){
     //     allCell[i].setAttribute("onclick","clickBox(this)")
     // }
-
+    console.log(blueTheme)
+    blueTheme.onclick=()=>{
+        mainBox.classList.add("blue")
+        selectBox.classList.add("show")
+        selectTheme.classList.add("hide")
+    }
+    greenTheme.onclick = () => {
+        mainBox.classList.add("green")
+        selectBox.classList.add("show")
+        selectTheme.classList.add("hide")
+    }
+    grayTheme.onclick = () => {
+        mainBox.classList.add("gray")
+        selectBox.classList.add("show")
+        selectTheme.classList.add("hide")
+    }
     selectXbutton.onclick = () => {
         selectBox.classList.add("hide");
         playBoard.classList.add("show");
